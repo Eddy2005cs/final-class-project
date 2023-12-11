@@ -1,0 +1,91 @@
+#Final Class Project
+#
+#By: Edward Rodriguez
+
+import turtle
+
+print('Turtle Draw Project Starting...')
+
+def draw_smiley_face():
+    window = turtle.Screen()
+    window.bgcolor("skyblue")    
+# Change background color
+
+    # Draw sun
+    sun_pen = turtle.Turtle()
+    sun_pen.speed(2)
+    sun_pen.color("yellow")
+    sun_pen.penup()
+    sun_pen.goto(-250, 200)
+    sun_pen.begin_fill()
+    sun_pen.circle(50)
+    sun_pen.end_fill()
+
+    # Draw grass
+    grass_pen = turtle.Turtle()
+    grass_pen.speed(2)
+    grass_pen.color("green")
+    grass_pen.penup()
+    grass_pen.goto(-300, -100)
+    grass_pen.pendown()
+    grass_pen.begin_fill()
+    grass_pen.forward(600)
+    grass_pen.right(90)
+    grass_pen.forward(200)
+    grass_pen.right(90)
+    grass_pen.forward(600)
+    grass_pen.right(90)
+    grass_pen.forward(200)
+    grass_pen.end_fill()
+
+    # Draw clouds
+    def draw_cloud(x, y):
+        cloud_pen = turtle.Turtle()
+        cloud_pen.speed(2)
+        cloud_pen.color("white")
+        cloud_pen.penup()
+        cloud_pen.goto(x, y)
+        cloud_pen.begin_fill()
+        cloud_pen.circle(30)
+        cloud_pen.end_fill()
+
+    draw_cloud(-50, 150)
+    draw_cloud(150, 170)
+    draw_cloud(-180,120)
+
+    # Draw smiley face
+    smiley_pen = turtle.Turtle()
+    smiley_pen.speed(2)
+    smiley_pen.color("yellowgreen", "black")
+# Set fill color and outline color
+
+    # Draw face
+    smiley_pen.penup()
+    smiley_pen.goto(0, -100)
+    smiley_pen.pendown()
+    smiley_pen.begin_fill()
+    smiley_pen.circle(100)
+    smiley_pen.end_fill()
+
+    # Draw left eye
+    smiley_pen.penup()
+    smiley_pen.goto(-40, 20)
+    smiley_pen.pendown()
+    smiley_pen.circle(15)
+
+    # Draw right eye
+    smiley_pen.penup()
+    smiley_pen.goto(40, 20)
+    smiley_pen.pendown()
+    smiley_pen.circle(15)
+
+    # Draw mouth
+    smiley_pen.penup()
+    smiley_pen.goto(-40, -30)
+    smiley_pen.pendown()
+    smiley_pen.right(90)
+    smiley_pen.circle(40, 180)
+
+    turtle.done()
+
+draw_smiley_face()
